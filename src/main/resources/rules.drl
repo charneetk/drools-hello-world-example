@@ -1,0 +1,10 @@
+import com.example.model.Message;
+
+rule "Process Message"
+when
+    $msg : Message(status == "NEW")
+then
+    System.out.println("Processing: " + $msg.getText());
+    $msg.setStatus("PROCESSED");
+    
+end

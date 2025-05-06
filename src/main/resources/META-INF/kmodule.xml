@@ -1,0 +1,6 @@
+<!-- File: src/main/resources/META-INF/kmodule.xml -->
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="rules" >
+        <ksession name="ksession-rule"/>
+    </kbase>
+</kmodule>
