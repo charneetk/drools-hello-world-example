@@ -8,3 +8,12 @@ then
     $msg.setStatus("PROCESSED");
     
 end
+
+rule "Exit Message"
+when
+    $msg : Message(status != "NEW")
+then
+    System.out.println("Processing: " + $msg.getText());
+    $msg.setStatus("EXIT");
+    
+end

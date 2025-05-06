@@ -1,6 +1,8 @@
 # Drools Hello World Application
 
-This is a simple Java-based application demonstrating the use of the **Drools Rule Engine** using KieSession. It uses a basic `.drl` rule file to process a `Message` object.
+-This is a simple Java-based application demonstrating the use of the **Drools Rule Engine** using KieSession. It uses a basic `.drl` rule file to process a `Message` object.
+
+- A RESTful API is also exposed to process business rules using Drools.
 
 ## Prerequisites
 
@@ -26,4 +28,22 @@ This is a simple Java-based application demonstrating the use of the **Drools Ru
 
 4.  Run the Application
 
-        mvn exec:java -Dexec.mainClass="com.example.main.DroolTest"
+        mvn spring-boot:run
+
+The application will start on http://localhost:8080
+
+## API Endpoint
+
+POST /drools/process
+
+Request Body:
+{
+"text": "Hello",
+"status": "NEW"
+}
+
+Response:
+{
+"text": "Hello",
+"status": "PROCESSED"
+}

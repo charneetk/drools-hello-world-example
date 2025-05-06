@@ -4,6 +4,10 @@ public class Message {
     private String text;
     private String status;
 
+    // Default constructor
+    public Message() {
+    }
+
     public Message(String text, String status) {
         this.text = text;
         this.status = status;
